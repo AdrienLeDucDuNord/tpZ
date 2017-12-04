@@ -43,6 +43,6 @@ class PlayerController extends Controller
     public function index(){
         $em = $this->getDoctrine()->getManager();
         $players = $em->getRepository(Player::class)->findAll();
-        return $this->render('Player/show.html.twig', array("player" => $players));
+        return $this->render('Player/index.html.twig', array("player" => $players));
     }
 }
